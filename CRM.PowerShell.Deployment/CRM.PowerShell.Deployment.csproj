@@ -93,6 +93,7 @@
     <Compile Include="Models\Enumerations.cs" />
     <Compile Include="Models\SolutionInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SetBusinessRuleOrder.cs" />
     <Compile Include="SetComponentSolutionsVersionInfo.cs" />
   </ItemGroup>
   <ItemGroup>

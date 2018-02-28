@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="DeploymentTest.ps1" />
+    <None Include="BusinessRuleOrderTest.ps1" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
