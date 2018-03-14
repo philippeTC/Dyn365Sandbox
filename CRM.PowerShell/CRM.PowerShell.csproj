@@ -51,6 +51,7 @@
     <None Include="DeploymentTest.ps1" />
     <None Include="BusinessRuleOrderTest.ps1" />
     <None Include="packages.config" />
+    <None Include="TestSanboxBackupRestore.ps1" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

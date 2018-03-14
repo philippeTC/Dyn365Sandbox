@@ -27,5 +27,11 @@ namespace CRM.UnitTest.Fakes
             return (IOrganizationService)connection.OrganizationWebProxyClient != null ? (IOrganizationService)connection.OrganizationWebProxyClient : (IOrganizationService)connection.OrganizationServiceProxy;
         }
 
+        public IOrganizationService CreateOrganizationService(Guid? userId, TimeSpan timeout)
+        {
+            CrmServiceClient connection = new CrmServiceClient(ConfigurationManager.ConnectionStrings["CrmConnection"].ConnectionString);
+            connection.OrganizationServiceProxy.Timeout = timeout;
+            return (IOrganizationService)connection.OrganizationWebProxyClient != null ? (IOrganizationService)connection.OrganizationWebProxyClient : (IOrganizationService)connection.OrganizationServiceProxy;
+        }
     }
 }
