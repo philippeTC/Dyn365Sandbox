@@ -16,7 +16,7 @@ Get-Help Set-BusinessRuleOrder
 # Target: SIT
 Set-BusinessRuleOrder `
  -CrmSourceConnectionString "Url=https://thomascookdev.crm4.dynamics.com;Username=tcgdynamicscrmnoprd@thomascook.onmicrosoft.com;Password=9L%$!AIOps$$;authtype=Office365" `
- -CrmTargetConnectionString "Url=https://thomascooksit.crm4.dynamics.com;Username=tcgdynamicscrmnoprd@thomascook.onmicrosoft.com;Password=9L%$!AIOps$$;authtype=Office365" `
+ -CrmTargetConnectionString "Url=https://thomascookstaging.crm4.dynamics.com;Username=tcgdynamicscrmnoprd@thomascook.onmicrosoft.com;Password=9L%$!AIOps$$;authtype=Office365" `
  -EntityName "tc_compensation"
 
  # Debug from visual studio

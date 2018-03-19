@@ -51,6 +51,38 @@ namespace CRM.UnitTest
         }
 
         [TestMethod]
+        public void AsynchronousExport()
+        {
+            IOrganizationService organizationService = new FakeOrganizationServiceFactory().CreateOrganizationService(null);
+
+            string solutionName = "TempHans";
+            string solutionFilePath = @"C:\Users\phili\Downloads\";
+
+            // export solution async
+
+            try
+            {
+                // export solution
+                var request = new ExportSolutionRequest
+                {
+                    Managed = false,
+                    SolutionName = solutionName,
+                    TargetVersion = "8.2"
+                };
+
+                var response = (ExportSolutionResponse)organizationService.Execute(request);
+            }
+            catch (FaultException<OrganizationServiceFault> ex)
+            {
+                throw new Exception("Error (OrganizationServiceFault) occured :" + ex.Detail != null ? ex.Detail.Message : ex.Message);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error occured :" + ex.Message);
+            }
+        }
+
+        [TestMethod]
         public void PublishCustomizations()
         {
             IOrganizationService organizationService = new FakeOrganizationServiceFactory().CreateOrganizationService(null, new TimeSpan(0, 20, 0));

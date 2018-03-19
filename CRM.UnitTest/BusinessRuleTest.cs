@@ -18,7 +18,7 @@ namespace CRM.UnitTest
     {
         private IOrganizationService sourceOrganizationService = null;
         private IOrganizationService targetOrganizationService = null;
-        //private string entityName = "tc_compensation";
+        //private string entityName = "incident";
         private string entityName = string.Empty;
 
         [TestMethod]
